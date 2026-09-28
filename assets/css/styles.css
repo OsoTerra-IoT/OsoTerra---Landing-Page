@@ -547,3 +547,6 @@ main section:not(#ecosistema), #contacto { scroll-margin-top: 6.5rem; }
 @media (max-width: 359px) {
   .brand-logo { width: 2rem; height: 2rem; }
 }
+
+/* Plan buttons are links to the Web App registration */
+.plan-cta { display: block; text-align: center; text-decoration: none; box-sizing: border-box; }
