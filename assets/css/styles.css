@@ -538,4 +538,8 @@ main section:not(#ecosistema), #contacto { scroll-margin-top: 6.5rem; }
   .home-el-007 a { display: flex; align-items: center; min-height: 2.9rem; padding: 0.7rem 0.9rem; border-radius: 0.8rem; font-size: 0.95rem; }
   .home-el-007 a:hover, .home-el-007 a[aria-current] { background: #edf8f1; color: #047857; }
   .home-el-007 a[aria-current]::after { display: none; }
+}.brand-logo { width: 2.5rem; height: 2.5rem; flex-shrink: 0; border-radius: 9999px; }
+.brand-logo-footer { width: 3rem; height: 3rem; }
+@media (max-width: 359px) {
+  .brand-logo { width: 2rem; height: 2rem; }
 }
