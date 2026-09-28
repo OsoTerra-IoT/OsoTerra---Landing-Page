@@ -462,6 +462,10 @@ html { scroll-behavior: smooth; scroll-padding-top: 0; }
 .language-option { min-width: auto; padding: 0.25rem 0.15rem; border: 0; border-radius: 0; background: transparent; color: #9ca3af; font: inherit; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.04em; cursor: pointer; transition: color 180ms ease; }
 .language-option:hover { background: transparent; color: #374151; }
 .language-option.is-active { background: transparent; color: #047857; font-weight: 700; box-shadow: none; }
+/* Accessible contrast: white text on #047857 (5.48:1) instead of #059669 (3.77:1) */
+:is(.home-el-017, .home-el-182, .home-el-204) { background-color: #047857; }
+:is(.home-el-017, .home-el-204):hover { background-color: #065f46; }
+:is(.home-el-180, .home-el-228) { border-color: #047857; color: #047857; }
 .language-divider { color: #d1d5db; font-size: 0.75rem; line-height: 1; user-select: none; }
 .mobile-language-switcher { display: none; }
 .mobile-menu-toggle { display: none; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; padding: 0; border: 1px solid rgb(229 231 235 / 60%); border-radius: 9999px; background: rgb(243 244 246 / 90%); color: #374151; cursor: pointer; box-shadow: none; transition: background-color 180ms ease, color 180ms ease; }
