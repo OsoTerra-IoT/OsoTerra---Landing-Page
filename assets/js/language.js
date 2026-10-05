@@ -13,6 +13,7 @@ const osoSenseTranslations = {
   "Equipo": "Team",
   "Contacto": "Contact",
   "Probar Gratis": "Try for free",
+  "Iniciar sesión": "Sign in",
   "Inicio": "Home",
   "Agricultura inteligente": "Smart agriculture",
   "Suelo vivo, Cosecha segura.": "Living soil, secure harvest.",
