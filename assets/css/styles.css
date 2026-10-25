@@ -475,7 +475,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 0; }
 .mobile-menu-toggle .menu-icon-close { display: none; }
 .mobile-menu-toggle.is-open .menu-icon-open { display: none; }
 .mobile-menu-toggle.is-open .menu-icon-close { display: block; }
-main section:not(#ecosistema), #contacto { scroll-margin-top: 6.5rem; }
+main section:not(#ecosistema), #contacto, [id^="capacidad-"], #paso-instalacion { scroll-margin-top: 6.5rem; }
 #ecosistema { scroll-margin-top: 0; }
 #faq details { overflow: hidden; }
 #faq details::details-content { block-size: 0; overflow: hidden; opacity: 0; transition: block-size 360ms ease, opacity 240ms ease, content-visibility 360ms allow-discrete; }

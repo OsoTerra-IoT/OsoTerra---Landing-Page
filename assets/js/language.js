@@ -116,8 +116,9 @@ const osoSenseTranslations = {
   "Sensores de suelo": "Soil sensors",
   "Soporte agronómico": "Agronomic support",
   "Ayuda": "Help",
-  "Guías de instalación": "Installation guides",
-  "Soporte": "Support",
+  "Cómo se instala": "How it is installed",
+  "Empezar": "Get started",
+  "Crear una cuenta": "Create an account",
 };
 
 /** Origin of the OsoSense Web App: its links carry the language chosen here (?lang=es|en). */
