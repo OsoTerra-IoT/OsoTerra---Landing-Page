@@ -116,8 +116,20 @@ const osoSenseTranslations = {
   "Sensores de suelo": "Soil sensors",
   "Soporte agronómico": "Agronomic support",
   "Ayuda": "Help",
-  "Guías de instalación": "Installation guides",
-  "Soporte": "Support",
+  "Cómo se instala": "How it is installed",
+  "Empezar": "Get started",
+  "Crear una cuenta": "Create an account",
+};
+
+/** Origin of the OsoSense Web App: its links carry the language chosen here (?lang=es|en). */
+const WEB_APP_ORIGIN = "https://oso-terra-web-application.vercel.app";
+
+const syncWebAppLinks = (language) => {
+  document.querySelectorAll(`a[href^="${WEB_APP_ORIGIN}"]`).forEach((link) => {
+    const url = new URL(link.href);
+    url.searchParams.set("lang", language);
+    link.href = url.toString();
+  });
 };
 
 const originalText = new WeakMap();
@@ -196,11 +208,24 @@ const translatePage = (language) => {
           : "Abrir menú",
     );
   }
-  localStorage.setItem("ososense-language", language);
+  syncWebAppLinks(language);
+  try {
+    localStorage.setItem("ososense-language", language);
+  } catch {
+    /* Storage may be disabled; the choice still applies to this visit. */
+  }
 };
 
 document.querySelectorAll("[data-language]").forEach((button) => {
   button.addEventListener("click", () => translatePage(button.dataset.language));
 });
 
-translatePage(localStorage.getItem("ososense-language") || "en");
+const savedLanguage = (() => {
+  try {
+    return localStorage.getItem("ososense-language");
+  } catch {
+    return null;
+  }
+})();
+// Both segments are Spanish-speaking growers and advisors, so Spanish comes first.
+translatePage(savedLanguage === "en" ? "en" : "es");

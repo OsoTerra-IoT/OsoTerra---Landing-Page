@@ -459,8 +459,9 @@ html { scroll-behavior: smooth; scroll-padding-top: 0; }
 .home-el-007 a[aria-current] { color: #047857; font-weight: 700; }
 .home-el-007 a[aria-current]::after { position: absolute; right: 0; bottom: -0.65rem; left: 0; height: 2px; border-radius: 9999px; background: #059669; content: ""; }
 .language-switcher { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0; border: 0; background: transparent; box-shadow: none; }
-.language-option { min-width: auto; padding: 0.25rem 0.15rem; border: 0; border-radius: 0; background: transparent; color: #9ca3af; font: inherit; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.04em; cursor: pointer; transition: color 180ms ease; }
-.language-option:hover { background: transparent; color: #374151; }
+/* 44 x 44 px touch target and 4.5:1 contrast for the inactive language (Style Guidelines 5.1). */
+.language-option { display: inline-grid; place-items: center; min-width: 44px; min-height: 44px; padding: 0 0.25rem; border: 0; border-radius: 999px; background: transparent; color: #4b5563; font: inherit; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.04em; cursor: pointer; transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms cubic-bezier(0.4, 0, 0.2, 1); }
+.language-option:hover { background: #f0fdf4; color: #111827; }
 .language-option.is-active { background: transparent; color: #047857; font-weight: 700; box-shadow: none; }
 /* Accessible contrast: white text on #047857 (5.48:1) instead of #059669 (3.77:1) */
 :is(.home-el-017, .home-el-182, .home-el-204) { background-color: #047857; }
@@ -474,7 +475,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 0; }
 .mobile-menu-toggle .menu-icon-close { display: none; }
 .mobile-menu-toggle.is-open .menu-icon-open { display: none; }
 .mobile-menu-toggle.is-open .menu-icon-close { display: block; }
-main section:not(#ecosistema), #contacto { scroll-margin-top: 6.5rem; }
+main section:not(#ecosistema), #contacto, [id^="capacidad-"], #paso-instalacion { scroll-margin-top: 6.5rem; }
 #ecosistema { scroll-margin-top: 0; }
 #faq details { overflow: hidden; }
 #faq details::details-content { block-size: 0; overflow: hidden; opacity: 0; transition: block-size 360ms ease, opacity 240ms ease, content-visibility 360ms allow-discrete; }
