@@ -551,3 +551,12 @@ main section:not(#ecosistema), #contacto, [id^="capacidad-"], #paso-instalacion 
 
 /* Plan buttons are links to the Web App registration */
 .plan-cta { display: block; text-align: center; text-decoration: none; box-sizing: border-box; }
+
+/* Videos About-the-Product and About-the-Team */
+.videos-section { width: 96%; max-width: 1840px; margin: 0 auto; padding: 4rem 0; }
+.videos-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; max-width: 72rem; margin: 0 auto; }
+@media (min-width: 768px) { .videos-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.video-card { margin: 0; }
+.video-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 1rem; overflow: hidden; background: #0f2a1d; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-card figcaption { margin-top: 0.75rem; text-align: center; font-weight: 600; }
